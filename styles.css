@@ -397,14 +397,106 @@ details,
   margin-bottom: 0;
 }
 
-/* Product video */
+/* Videos */
 
-.product-video {
+.videos {
   margin-top: clamp(2.5rem, 6vw, 4rem);
 }
 
-.product-video > h2 {
-  margin-top: 0;
+.videos > h2 {
+  margin: 0 0 0.4rem;
+}
+
+.section-lead {
+  max-width: 62ch;
+  margin-bottom: 1.4rem;
+  color: var(--muted);
+}
+
+.video-tabs {
+  position: relative;
+  padding: clamp(0.9rem, 2.5vw, 1.5rem);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.video-tabs > input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.tab-bar {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.4rem;
+  padding: 0.35rem;
+  background: var(--surface-soft);
+  border-radius: 1.1rem;
+}
+
+.tab-bar label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.tab-bar label:hover {
+  background: color-mix(in srgb, var(--surface) 60%, transparent);
+}
+
+.tab-name {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.tab-meta {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+#vt-coaching:checked ~ .tab-bar label[for="vt-coaching"],
+#vt-delegierte:checked ~ .tab-bar label[for="vt-delegierte"],
+#vt-analyse-mac:checked ~ .tab-bar label[for="vt-analyse-mac"],
+#vt-produktvideo:checked ~ .tab-bar label[for="vt-produktvideo"] {
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+#vt-coaching:checked ~ .tab-bar label[for="vt-coaching"] .tab-name,
+#vt-delegierte:checked ~ .tab-bar label[for="vt-delegierte"] .tab-name,
+#vt-analyse-mac:checked ~ .tab-bar label[for="vt-analyse-mac"] .tab-name,
+#vt-produktvideo:checked ~ .tab-bar label[for="vt-produktvideo"] .tab-name {
+  color: var(--accent);
+}
+
+#vt-coaching:focus-visible ~ .tab-bar label[for="vt-coaching"],
+#vt-delegierte:focus-visible ~ .tab-bar label[for="vt-delegierte"],
+#vt-analyse-mac:focus-visible ~ .tab-bar label[for="vt-analyse-mac"],
+#vt-produktvideo:focus-visible ~ .tab-bar label[for="vt-produktvideo"] {
+  outline: 3px solid color-mix(in srgb, var(--accent) 55%, transparent);
+  outline-offset: 2px;
+}
+
+.video-panel {
+  display: none;
+  grid-template-columns: minmax(0, 2.4fr) minmax(0, 1fr);
+  gap: clamp(1rem, 3vw, 2rem);
+  align-items: center;
+  margin-top: clamp(0.9rem, 2.5vw, 1.5rem);
+}
+
+#vt-coaching:checked ~ .video-panels #vp-coaching,
+#vt-delegierte:checked ~ .video-panels #vp-delegierte,
+#vt-analyse-mac:checked ~ .video-panels #vp-analyse-mac,
+#vt-produktvideo:checked ~ .video-panels #vp-produktvideo {
+  display: grid;
 }
 
 .video-frame {
@@ -417,15 +509,77 @@ details,
   height: auto;
   aspect-ratio: 16 / 9;
   background: #0b111c;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
 }
 
-.video-frame figcaption {
-  margin-top: 0.65rem;
+.video-info h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.45rem;
+  letter-spacing: -0.025em;
+}
+
+.video-info p {
   color: var(--muted);
-  font-size: 0.88rem;
+}
+
+.video-badge {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  padding: 0.2rem 0.7rem;
+  background: var(--accent-soft);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.video-info .video-badge {
+  color: var(--accent-strong);
+}
+
+.checks {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.checks li {
+  position: relative;
+  margin-block: 0.45rem;
+  padding-left: 1.7rem;
+  font-size: 0.97rem;
+}
+
+.checks li::before {
+  position: absolute;
+  top: 0.42em;
+  left: 0.2rem;
+  width: 0.75rem;
+  height: 0.4rem;
+  border-bottom: 2.5px solid var(--teal);
+  border-left: 2.5px solid var(--teal);
+  transform: rotate(-45deg);
+  content: "";
+}
+
+.video-link {
+  margin: -0.3rem 0 1.1rem;
+}
+
+.video-link a {
+  display: inline-block;
+  padding: 0.3rem 0.85rem;
+  color: var(--accent-strong);
+  background: var(--accent-soft);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.video-link a:hover {
+  background: color-mix(in srgb, var(--accent) 22%, var(--surface));
 }
 
 /* Screenshots */
@@ -787,6 +941,14 @@ code {
 }
 
 @media (max-width: 52rem) {
+  .video-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .tab-bar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .cards {
     grid-template-columns: 1fr;
   }

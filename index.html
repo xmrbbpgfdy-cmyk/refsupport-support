@@ -7,7 +7,7 @@
   <meta name="color-scheme" content="light dark">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'">
   <title>Support · RefSupport</title>
-  <link rel="stylesheet" href="styles.css?v=20261008d">
+  <link rel="stylesheet" href="styles.css?v=20261008e">
   <link rel="icon" type="image/png" href="images/app-icon-64.png">
   <link rel="apple-touch-icon" href="images/app-icon-180.png">
   <link rel="alternate" hreflang="en" href="en/index.html">
@@ -40,6 +40,7 @@
       <p class="hero-claim"><strong>Im Einsatz von der ersten Liga bis zum Breitensport.</strong> Entwickelt aus der Praxis am Spieltag, für die Praxis am Spieltag.</p>
       <div class="hero-actions">
         <a class="button" href="anleitung.html">Anleitung für den Einstieg</a>
+        <a class="button secondary" href="#videos">Videos ansehen</a>
         <a class="button secondary" href="#faq">Häufige Fragen</a>
       </div>
     </section>
@@ -59,15 +60,95 @@
       </article>
     </section>
 
-    <section class="product-video" aria-labelledby="video">
-      <h2 id="video">RefSupport in 40 Sekunden</h2>
-      <figure class="video-frame">
-        <video controls playsinline preload="none" width="1920" height="1080" poster="media/refsupport-produktvideo-poster.jpg">
-          <source src="media/refsupport-produktvideo.mp4" type="video/mp4">
-          <a href="media/refsupport-produktvideo.mp4">Produktvideo herunterladen (MP4)</a>
-        </video>
-        <figcaption>Kurzer Überblick über die wichtigsten Funktionen. Das Video hat keinen Ton.</figcaption>
-      </figure>
+    <section class="videos" id="videos" aria-labelledby="videos-title">
+      <h2 id="videos-title">RefSupport in Aktion</h2>
+      <p class="section-lead">Vier kurze Videos zeigen die App Schritt für Schritt – mit echten Bildschirmen und erfundenen Beispieldaten. Alle Videos sind ohne Ton.</p>
+      <div class="video-tabs">
+        <input type="radio" name="video-tab" id="vt-coaching" checked>
+        <input type="radio" name="video-tab" id="vt-delegierte">
+        <input type="radio" name="video-tab" id="vt-analyse-mac">
+        <input type="radio" name="video-tab" id="vt-produktvideo">
+        <div class="tab-bar" role="group" aria-label="Video auswählen">
+          <label for="vt-coaching"><span class="tab-name">Coaching</span><span class="tab-meta">iPad · 0:51</span></label>
+          <label for="vt-delegierte"><span class="tab-name">Delegierte</span><span class="tab-meta">iPad · 1:12</span></label>
+          <label for="vt-analyse-mac"><span class="tab-name">Analyse</span><span class="tab-meta">Mac · 0:30</span></label>
+          <label for="vt-produktvideo"><span class="tab-name">Überblick</span><span class="tab-meta">iPad · 0:40</span></label>
+        </div>
+        <div class="video-panels">
+          <article class="video-panel" id="vp-coaching">
+            <div class="video-frame">
+              <video controls playsinline preload="none" width="1920" height="1080" poster="media/refsupport-coaching-poster.jpg">
+                <source src="media/refsupport-coaching.mp4" type="video/mp4">
+                <a href="media/refsupport-coaching.mp4">Video herunterladen (MP4)</a>
+              </video>
+            </div>
+            <div class="video-info">
+              <p class="video-badge">iPad · 0:51 min</p>
+              <h3>Coaching-Modus</h3>
+              <p>Schiedsrichter beobachten: Spielzeit führen, Beobachtungen mit Bewertung und Kategorie eintragen und das Protokoll teilen.</p>
+              <ul class="checks">
+                <li>Uhr und Spielstand mit einem Tipp</li>
+                <li>Notiz, Bewertung und Kategorie A1–B4</li>
+                <li>Team-Time-out und markierte Szenen</li>
+              </ul>
+            </div>
+          </article>
+          <article class="video-panel" id="vp-delegierte">
+            <div class="video-frame">
+              <video controls playsinline preload="none" width="1920" height="1080" poster="media/refsupport-delegierte-poster.jpg">
+                <source src="media/refsupport-delegierte.mp4" type="video/mp4">
+                <a href="media/refsupport-delegierte.mp4">Video herunterladen (MP4)</a>
+              </video>
+            </div>
+            <div class="video-info">
+              <p class="video-badge">iPad · 1:12 min</p>
+              <h3>Delegiertenmodus</h3>
+              <p>Vom Anlegen des Spiels bis zum Bericht: Kader, Checklisten, Ereignisse und besondere Spielsituationen.</p>
+              <ul class="checks">
+                <li>Spiel anlegen und Kader erfassen</li>
+                <li>Tore, Strafen und Time-outs in der Timeline</li>
+                <li>Checklisten und Videobeweis-Ablauf</li>
+              </ul>
+            </div>
+          </article>
+          <article class="video-panel" id="vp-analyse-mac">
+            <div class="video-frame">
+              <video controls playsinline preload="none" width="1920" height="1080" poster="media/refsupport-analyse-mac-poster.jpg">
+                <source src="media/refsupport-analyse-mac.mp4" type="video/mp4">
+                <a href="media/refsupport-analyse-mac.mp4">Video herunterladen (MP4)</a>
+              </video>
+            </div>
+            <div class="video-info">
+              <p class="video-badge">Mac · 0:30 min</p>
+              <h3>Analyse auf dem Mac</h3>
+              <p>Nachbereitung am großen Bildschirm: alle Szenen im Überblick, gezielt filtern und Anmerkungen ergänzen.</p>
+              <ul class="checks">
+                <li>Szenen mit Spielzeit und Bewertung</li>
+                <li>Filter nach Kategorie und Entscheidung</li>
+                <li>Allgemeine Anmerkungen zum Spiel</li>
+              </ul>
+            </div>
+          </article>
+          <article class="video-panel" id="vp-produktvideo">
+            <div class="video-frame">
+              <video controls playsinline preload="none" width="1920" height="1080" poster="media/refsupport-produktvideo-poster.jpg">
+                <source src="media/refsupport-produktvideo.mp4" type="video/mp4">
+                <a href="media/refsupport-produktvideo.mp4">Video herunterladen (MP4)</a>
+              </video>
+            </div>
+            <div class="video-info">
+              <p class="video-badge">iPad · 0:40 min</p>
+              <h3>RefSupport im Überblick</h3>
+              <p>Die wichtigsten Funktionen in 40 Sekunden.</p>
+              <ul class="checks">
+                <li>Vorbereiten, begleiten, auswerten</li>
+                <li>Coaching- und Delegiertenmodus</li>
+                <li>Berichte und Abrechnung als PDF</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
     <section class="screenshots" aria-labelledby="screenshots">
