@@ -121,13 +121,12 @@ a:hover {
   letter-spacing: -0.02em;
 }
 
-.brand::before {
-  width: 1.7rem;
-  height: 1.7rem;
-  background: linear-gradient(140deg, var(--accent), var(--teal));
-  border-radius: 0.55rem;
-  box-shadow: inset 0 0 0 0.42rem color-mix(in srgb, #ffffff 22%, transparent);
-  content: "";
+.brand img {
+  display: block;
+  width: 1.85rem;
+  height: 1.85rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-sm);
 }
 
 .brand:hover {
@@ -265,6 +264,23 @@ dl {
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
+}
+
+.hero-icon {
+  display: block;
+  width: 6.5rem;
+  height: 6.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 1.45rem;
+  box-shadow: 0 14px 30px rgb(11 17 28 / 28%);
+}
+
+.hero-claim {
+  max-width: 62ch;
+  margin: 1.25rem 0 0;
+  padding-left: 0.9rem;
+  border-left: 0.2rem solid var(--teal);
+  font-size: 1.05rem;
 }
 
 .hero-actions {
