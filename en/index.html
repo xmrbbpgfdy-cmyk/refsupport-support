@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Support and frequently asked questions for the RefSupport app.">
+  <meta name="color-scheme" content="light dark">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Support · RefSupport</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="alternate" hreflang="de" href="../index.html">
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">RefSupport</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="imprint.html">Imprint</a>
+      </nav>
+      <nav class="language-nav" aria-label="Language">
+        <a href="../index.html" lang="de">DE</a>
+        <a href="index.html" lang="en" aria-current="page">EN</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" class="page">
+    <section class="hero">
+      <p class="eyebrow">Support</p>
+      <h1>Support for match day</h1>
+      <p class="lead">RefSupport assists referee observers and technical delegates at handball matches: prepare matches, document match time and events, capture observations and analyses, and export reports and expense claims.</p>
+    </section>
+
+    <section class="cards" aria-label="Feature overview">
+      <article class="card">
+        <h2>Prepare</h2>
+        <p>Import matches from supported competitions, capture teams and rosters, and keep your own documents available offline.</p>
+      </article>
+      <article class="card">
+        <h2>Officiate</h2>
+        <p>Keep the match clock, goals, penalties, team time-outs, checklists, text notes, and handwritten observations in one place.</p>
+      </article>
+      <article class="card">
+        <h2>Review</h2>
+        <p>Export match reports, analyses, and travel expense claims as PDF, or share a match as a RefSupport file.</p>
+      </article>
+    </section>
+
+    <section class="content" aria-labelledby="faq">
+      <h2 id="faq">Frequently asked questions</h2>
+      <div class="faq">
+        <details>
+          <summary>Where are my matches and documents stored?</summary>
+          <p>Matches and imported documents are stored on the device. If an iCloud account is available, RefSupport also synchronizes them between your RefSupport devices through your private iCloud/CloudKit database. Profile data such as your name, address, and IBAN is stored separately on the device.</p>
+        </details>
+        <details>
+          <summary>How do I import a match?</summary>
+          <p>From the match overview, you can select supported competitions from handball.net, the HBL/Sportradar source, and the HBF source. You can also create a match manually or open a shared <code>.refsupportgame</code> file. Network imports are cached locally and may include teams, venues, officials, logos, and photos depending on the source.</p>
+        </details>
+        <details>
+          <summary>How does camera and photo import work?</summary>
+          <p>In delegate mode, you can scan a paper match sheet, use a selected photo, or open a PDF. Text recognition runs on the device using Apple’s Vision framework. The source image is not stored as part of the match; only the roster data you review is retained.</p>
+        </details>
+        <details>
+          <summary>Does RefSupport need my location or microphone?</summary>
+          <p>No. The app does not access the device’s current location or microphone. To calculate mileage, the start and destination addresses you enter are sent to Apple’s map and routing service. Audio is used only to play a Sportlounge video.</p>
+        </details>
+        <details>
+          <summary>How do I use Sportlounge videos?</summary>
+          <p>This feature is optional. Sign in with your Sportlounge account and enter the relevant game ID or Sportlounge link for the match. If “Stay signed in” is enabled, RefSupport stores your email address, password, club ID, and access token in the local Apple Keychain. Video and event data is loaded directly from Sportlounge.</p>
+        </details>
+        <details>
+          <summary>How can I export or share content?</summary>
+          <p>You can export match reports, analysis reports, and expense claims as PDFs, a delegate summary as text, and complete matches as <code>.refsupportgame</code> files through the system share sheet. Your choice in the share sheet determines the recipient.</p>
+        </details>
+        <details>
+          <summary>How do I manage or cancel my subscription?</summary>
+          <p>In RefSupport, open “My Data” and select “Manage subscription.” Apple will display your subscription management options. You can also manage the subscription in your Apple Account settings. Cancellation must take place at least 24 hours before the current period ends.</p>
+        </details>
+        <details>
+          <summary>How do I restore purchases?</summary>
+          <p>Open “My Data” and tap “Restore purchases” in the subscription section. The same action is available on the subscription screen. Use the Apple Account that was used to purchase the subscription.</p>
+        </details>
+        <details>
+          <summary>What can I do if synchronization fails?</summary>
+          <p>Check that you are signed in to iCloud on the device and have an internet connection. Then open “My Data” and select “Sync now.” Local content remains on the device while iCloud is temporarily unavailable.</p>
+        </details>
+      </div>
+
+      <h2>Contact</h2>
+      <p>If your question is not answered here, email <strong>{{EMAIL}}</strong>. Please include the RefSupport version and describe the steps leading to the issue. Do not send passwords or unnecessary personal data.</p>
+      <p class="meta">Last updated: {{STAND_DATUM}}</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© {{ANBIETER_NAME}}</p>
+      <nav class="footer-links" aria-label="Legal information">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="imprint.html">Imprint</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
