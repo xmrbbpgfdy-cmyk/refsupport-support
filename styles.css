@@ -397,6 +397,37 @@ details,
   margin-bottom: 0;
 }
 
+/* Product video */
+
+.product-video {
+  margin-top: clamp(2.5rem, 6vw, 4rem);
+}
+
+.product-video > h2 {
+  margin-top: 0;
+}
+
+.video-frame {
+  margin: 0;
+}
+
+.video-frame video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: #0b111c;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.video-frame figcaption {
+  margin-top: 0.65rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
 /* Screenshots */
 
 .screenshots {
