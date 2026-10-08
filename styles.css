@@ -171,6 +171,35 @@ h3 {
   margin-block: 2rem;
 }
 
+.screenshots {
+  margin-block: 2rem;
+}
+
+.shots {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.shot {
+  margin: 0;
+}
+
+.shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  box-shadow: var(--shadow);
+}
+
+.shot figcaption {
+  margin-top: 0.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 .card,
 .notice,
 details {
@@ -265,6 +294,10 @@ code {
 @media (max-width: 52rem) {
   .cards {
     grid-template-columns: 1fr;
+  }
+
+  .shots {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .language-nav {
