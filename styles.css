@@ -665,6 +665,37 @@ details,
   color: var(--accent);
 }
 
+/* Release history */
+
+.release-summary h2 {
+  margin-top: 0;
+}
+
+.release-summary ul {
+  padding-left: 1.3rem;
+}
+
+.release-summary li {
+  margin-block: 0.35rem;
+}
+
+.release {
+  padding-block: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.release h2 {
+  margin-top: 0;
+}
+
+.release > :last-child {
+  margin-bottom: 0;
+}
+
+.release + .meta {
+  margin-top: 1.5rem;
+}
+
 /* FAQ */
 
 .faq {
