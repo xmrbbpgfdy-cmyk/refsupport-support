@@ -36,7 +36,7 @@
     <p class="eyebrow">Legal</p>
     <h1>Privacy Policy</h1>
     <p class="lead">This policy describes how personal data is processed in the RefSupport app and on this support website. The RefSupport app does not operate its own backend server and contains no advertising, no user tracking, and no analytics or crash-reporting services.</p>
-    <p class="meta">Last updated: 17 October 2026. This English version is a convenience translation; the <a href="../datenschutz.html">German version</a> prevails.</p>
+    <p class="meta">Last updated: 18 October 2026. This English version is a convenience translation; the <a href="../datenschutz.html">German version</a> prevails.</p>
 
     <h2>1. Controller</h2>
     <p>Oliver Frankholz<br>Fedelhören 38<br>28203 Bremen<br>Germany</p>
@@ -61,13 +61,13 @@
 
     <h2>3. Local storage, iCloud and backups</h2>
     <p>Matches are stored as JSON files in the app’s documents area; your own documents are stored in the Application Support area. Profile data and individual settings are stored in <code>UserDefaults</code>, Sportlounge credentials in the Keychain, and retrieved schedule data in the cache.</p>
-    <p>If an iCloud account is available, matches and your own documents are synchronised automatically via Apple’s CloudKit in the user’s private database in the container <code>iCloud.com.oliverfrankholz.HandballTimer</code>. This includes personal content contained in matches or your own documents. The profile from “My Data” and the Sportlounge Keychain entries are not synchronised by this CloudKit feature.</p>
+    <p>If an iCloud account is available, matches and your own documents are synchronised automatically via Apple’s CloudKit in the user’s private database in the container <code>iCloud.com.oliverfrankholz.HandballTimer</code>. This includes personal content contained in matches or your own documents. The profile from “My Data”, the leagues starred as “Meine Ligen” (My leagues) and the selection of nuLiga sources are synchronised as well. The Sportlounge Keychain entries are not synchronised by this CloudKit feature.</p>
     <p>Before the local set of matches is reduced, RefSupport creates a local backup and keeps at most five such backups. A deleted match may therefore temporarily remain in these rotating local backups. In CloudKit, technical deletion markers remain for deleted matches and documents so that other devices do not upload deleted content again. Matches older than 90 days are merely archived and are not deleted automatically.</p>
 
     <h2>4. Network connections and recipients</h2>
     <p>With every internet connection, the respective service technically receives necessary data such as IP address, time, requested address and device/HTTP metadata. RefSupport only establishes connections for the features described below:</p>
     <ul>
-      <li><strong>Apple iCloud/CloudKit:</strong> synchronisation of matches and your own documents in the private iCloud database.</li>
+      <li><strong>Apple iCloud/CloudKit:</strong> synchronisation of matches, your own documents, the profile from “My Data”, “Meine Ligen” (My leagues) and the selection of nuLiga sources in the private iCloud database.</li>
       <li><strong>Apple App Store/StoreKit:</strong> loading the subscription products, purchase, checking the subscription status and restoring purchases. RefSupport receives the product ID, the verified entitlement status and, where applicable, expiry, revocation and upgrade information, but no credit card or full payment data.</li>
       <li><strong>Apple Maps and routing service:</strong> geocoding of the entered start and venue address and calculation of the driving distance. The current device location is not requested.</li>
       <li><strong><code>www.handball.net</code>:</strong> retrieval of competitions, schedules, teams, venues, officials and the logo/photo files referenced in the responses.</li>

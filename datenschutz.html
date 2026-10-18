@@ -36,7 +36,7 @@
     <p class="eyebrow">Rechtliches</p>
     <h1>Datenschutzerklärung</h1>
     <p class="lead">Diese Erklärung beschreibt die Verarbeitung personenbezogener Daten in der App RefSupport und auf dieser Support-Website. Die RefSupport-App betreibt keinen eigenen Backend-Server und enthält keine Werbung, kein Nutzertracking und keine Analytics- oder Crash-Reporting-Dienste.</p>
-    <p class="meta">Stand: 17. Oktober 2026</p>
+    <p class="meta">Stand: 18. Oktober 2026</p>
 
     <h2>1. Verantwortlicher</h2>
     <p>Oliver Frankholz<br>Fedelhören 38<br>28203 Bremen<br>Deutschland</p>
@@ -61,13 +61,13 @@
 
     <h2>3. Lokale Speicherung, iCloud und Backups</h2>
     <p>Spiele liegen als JSON-Dateien im Dokumentbereich der App; eigene Dokumente liegen im Application-Support-Bereich. Profildaten und einzelne Einstellungen liegen in <code>UserDefaults</code>, Sportlounge-Zugangsdaten im Schlüsselbund und abgerufene Spielplandaten im Cache.</p>
-    <p>Spiele und eigene Dokumente werden bei verfügbarem iCloud-Konto automatisch über Apples CloudKit in der privaten Datenbank des Nutzers im Container <code>iCloud.com.oliverfrankholz.HandballTimer</code> synchronisiert. Das umfasst auch personenbezogene Inhalte, die in Spielen oder eigenen Dokumenten enthalten sind. Das Profil aus „Meine Daten“ und der Sportlounge-Schlüsselbund werden durch diese eigene CloudKit-Funktion nicht synchronisiert.</p>
+    <p>Spiele und eigene Dokumente werden bei verfügbarem iCloud-Konto automatisch über Apples CloudKit in der privaten Datenbank des Nutzers im Container <code>iCloud.com.oliverfrankholz.HandballTimer</code> synchronisiert. Das umfasst auch personenbezogene Inhalte, die in Spielen oder eigenen Dokumenten enthalten sind. Ebenfalls synchronisiert werden das Profil aus „Meine Daten“, die als „Meine Ligen“ markierten Ligen und die Auswahl der nuLiga-Quellen. Der Sportlounge-Schlüsselbund wird durch diese eigene CloudKit-Funktion nicht synchronisiert.</p>
     <p>Vor einer Verringerung des lokalen Spielbestands legt RefSupport eine lokale Sicherung an und behält höchstens fünf solcher Spielstand-Sicherungen. Deshalb kann ein gelöschtes Spiel vorübergehend noch in diesen rotierenden lokalen Sicherungen enthalten sein. In CloudKit bleiben für gelöschte Spiele und Dokumente technische Löschinformationen bestehen, damit andere Geräte gelöschte Inhalte nicht erneut hochladen. Spiele, die älter als 90 Tage sind, werden lediglich archiviert und nicht automatisch gelöscht.</p>
 
     <h2>4. Netzwerkverbindungen und Empfänger</h2>
     <p>Bei jeder Internetverbindung fallen beim jeweiligen Dienst technisch notwendige Daten wie IP-Adresse, Zeitpunkt, angefragte Adresse und Geräte-/HTTP-Metadaten an. RefSupport stellt nur für die nachfolgend beschriebenen Funktionen Verbindungen her:</p>
     <ul>
-      <li><strong>Apple iCloud/CloudKit:</strong> Synchronisation von Spielen und eigenen Dokumenten in der privaten iCloud-Datenbank.</li>
+      <li><strong>Apple iCloud/CloudKit:</strong> Synchronisation von Spielen, eigenen Dokumenten, dem Profil aus „Meine Daten“, „Meine Ligen“ und der Auswahl der nuLiga-Quellen in der privaten iCloud-Datenbank.</li>
       <li><strong>Apple App Store/StoreKit:</strong> Laden der Aboprodukte, Kauf, Prüfung des Abostatus und Wiederherstellung von Käufen. RefSupport erhält Produkt-ID, verifizierten Berechtigungsstatus und gegebenenfalls Ablauf-, Widerrufs- und Upgrade-Informationen, aber keine Kreditkarten- oder vollständigen Zahlungsdaten.</li>
       <li><strong>Apple Karten- und Routendienst:</strong> Geocodierung der eingegebenen Start- und Hallenadresse und Berechnung der Fahrstrecke. Der aktuelle Gerätestandort wird nicht abgefragt.</li>
       <li><strong><code>www.handball.net</code>:</strong> Abruf von Wettbewerben, Spielplänen, Mannschaften, Spielorten, Offiziellen und den in den Antworten angegebenen Logo-/Foto-Dateien.</li>
