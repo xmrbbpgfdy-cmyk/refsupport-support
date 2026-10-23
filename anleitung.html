@@ -53,6 +53,7 @@
         <li><a href="#delegierte">Delegiertenmodus: Spiel leiten</a></li>
         <li><a href="#nach-dem-spiel">Nach dem Spiel: Berichte und Abrechnung</a></li>
         <li><a href="#analyse">Analyse und Sportlounge-Video</a></li>
+        <li><a href="#sportlounge-upload">Szenen in die Sportlounge hochladen</a></li>
         <li><a href="#dokumente">Dokumente offline bereithalten</a></li>
         <li><a href="#ordnung">Spiele suchen, archivieren, löschen</a></li>
         <li><a href="#probleme">Wenn etwas nicht klappt</a></li>
@@ -64,7 +65,7 @@
       <section aria-labelledby="voraussetzungen">
         <h2 id="voraussetzungen">1. Das brauchst du</h2>
         <ul>
-          <li><strong>Ein iPad oder einen Mac.</strong> RefSupport läuft auf dem iPad (ab iPadOS 17) und auf dem Mac. Eine iPhone-Version gibt es nicht.</li>
+          <li><strong>Ein iPad oder einen Mac.</strong> RefSupport läuft auf dem iPad (ab iPadOS 17) und auf dem Mac. Für das iPhone gibt es eine Beta über TestFlight: Im Coach-/Beobachtermodus kannst du Spiele verwalten und Szenen mit Bewertungen und Kommentaren erfassen. Delegierten- und Analysemodus sind dort nicht verfügbar.</li>
           <li><strong>Deinen Apple Account.</strong> Über ihn läuft das Abonnement „RefSupport Pro“ und – wenn du bei iCloud angemeldet bist – der Abgleich zwischen deinen Geräten.</li>
           <li><strong>Internet für die Einrichtung.</strong> Abo-Abschluss, Liga-Import und iCloud-Abgleich brauchen eine Verbindung. Deine Spiele und Dokumente liegen danach auf dem Gerät und bleiben in der Halle auch offline verfügbar.</li>
           <li><strong>Optional: Apple Pencil</strong> für handschriftliche Notizen und ein <strong>Sportlounge-Konto</strong>, wenn du Spielvideos in der Analyse nutzen möchtest.</li>
@@ -160,7 +161,7 @@
 
       <section aria-labelledby="modus">
         <h2 id="modus">6. Spiel öffnen und Modus wählen</h2>
-        <p>Tippe in „Meine Spiele“ auf dein Spiel. Beim ersten Öffnen fragt RefSupport <strong>„Modus für dieses Spiel wählen“</strong>:</p>
+        <p>Tippe in „Meine Spiele“ auf dein Spiel. Auf dem iPhone ist nur der Coach-/Beobachtermodus verfügbar. Auf iPad und Mac fragt RefSupport beim ersten Öffnen <strong>„Modus für dieses Spiel wählen“</strong>:</p>
         <dl>
           <dt>„Coach / Beobachter“</dt>
           <dd>Für die Schiedsrichterbeobachtung: Spieluhr, Spielstand und Beobachtungen mit Kategorie und Bewertung. Weiter bei <a href="#coaching">Schritt 7</a>.</dd>
@@ -185,6 +186,7 @@
           <li>Tippe bei einem <strong>Team-Time-out</strong> auf das Time-out der Mannschaft: Der erste Tipp stoppt sofort die Spielzeit und startet die 60 Sekunden. Im Time-out-Fenster kannst du Wurffortsetzung, „Passiv angezeigt“ und gespielte Pässe festhalten.</li>
           <li>Am Ende der ersten Halbzeit wird die Schaltfläche zu <strong>„HZ 1 Ende“</strong>; das Halbzeit-Fenster zeigt dir die noch aktiven Strafen. Zum Schluss beendest du das Spiel mit <strong>„Spielende“</strong>.</li>
         </ol>
+        <p><strong>Automatischer Spielabschluss:</strong> Wenn du nach Ablauf der Spielzeit nicht auf „Spielende“ tippst, schließt RefSupport das Spiel nach 15 Minuten automatisch ab und stoppt die Videozeit. Eine Verlängerung verschiebt den Abschluss auf 15 Minuten nach deren Ende. Bei einem erfassten Siebenmeterwerfen schließt du das Spiel selbst ab.</p>
         <div class="notice">
           <p><strong>Steht die Uhr?</strong> Eine angehaltene Spielzeit pulsiert orange, im Coach-Modus färbt sich auch der Eintragen-Knopf orange. Trägst du mehrmals bei stehender Zeit ein, erinnert dich ein Hinweis daran.</p>
         </div>
@@ -264,7 +266,7 @@
 
         <h3>Nach dem Abpfiff</h3>
         <ol class="steps">
-          <li>Beende das Spiel mit <strong>„Spielende“</strong>.</li>
+          <li>Beende das Spiel mit <strong>„Spielende“</strong>. Vergisst du dies, greift nach 15 Minuten der <a href="#coaching">automatische Spielabschluss</a>; nach einem erfassten Siebenmeterwerfen musst du selbst abschließen.</li>
           <li>Arbeite die Checkliste <strong>„Nach dem Spiel“</strong> ab.</li>
           <li>Öffne <strong>„Spielübersicht“</strong>: Dort stehen Begegnung, Offizielle, Checklisten, Zeiten, Team-Time-outs, Favoriten und die komplette Timeline. Mit <strong>„Zusammenfassung teilen“</strong> gibst du die Zusammenfassung als Text weiter.</li>
         </ol>
@@ -277,7 +279,7 @@
           <dt>„Spielprotokoll (PDF)“</dt>
           <dd>Erstellt das Protokoll deines Spiels als PDF und öffnet das Teilen-Menü.</dd>
           <dt>„Analyse exportieren“</dt>
-          <dd>Gibt den Analysebericht als PDF aus.</dd>
+          <dd>Exportiert den Analysebericht als PDF oder Excel (.xlsx), zum Sichern oder Teilen. Die Spieldaten stehen im PDF auf einer zusätzlichen Seite und in Excel im eigenen Blatt „Spieldaten“.</dd>
           <dt>„Spiel für App teilen“</dt>
           <dd>Erzeugt eine <code>.refsupportgame</code>-Datei, die andere in ihrer RefSupport-App öffnen können. Reisekosten und Dokumente sind darin nicht enthalten.</dd>
           <dt>„Reisekostenabrechnung“</dt>
@@ -311,7 +313,7 @@
           <li>Die Analyse listet die <strong>Szenen</strong> deines Protokolls auf. Mit „Szenen filtern“ grenzt du sie nach Kategorien A1–B4 und Entscheidungsbewertung ein.</li>
           <li>Tippe eine Szene an, um in den <strong>Szenendetails</strong> Verein, Bewertung, Kategorien und einen Kommentar (getippt oder handschriftlich) zu ergänzen.</li>
           <li>Unter <strong>„Allgemeine Anmerkungen“</strong> hältst du fest, was für das gesamte Spiel gilt.</li>
-          <li>Über „Analyse exportieren“ in „Meine Spiele“ oder den Export-Knopf in der Analyse wählst du PDF oder Excel (.xlsx). Der Export hat einen eigenen Filter für Favoriten, Bereiche und Bewertung. Excel beginnt mit dem Blatt „Videozeiten“, gefolgt von „Chronologisch“ und „Nach Bereichen“.</li>
+          <li>Über „Analyse exportieren“ in „Meine Spiele“ oder den Export-Knopf in der Analyse wählst du PDF oder Excel (.xlsx). Der Export hat einen eigenen Filter für Favoriten, Bereiche und Bewertung. Excel enthält neben „Videozeiten“, „Chronologisch“ und „Nach Bereichen“ jetzt das eigene Blatt <strong>„Spieldaten“</strong>. Im PDF stehen die Spieldaten auf einer zusätzlichen Seite: Ergebnis, Halbzeitstand, Wettbewerb, Halle, Offizielle und dein Name als Schiedsrichtercoach.</li>
         </ol>
 
         <h3>Sportlounge-Video verbinden (optional)</h3>
@@ -328,8 +330,20 @@
         </div>
       </section>
 
+      <section aria-labelledby="sportlounge-upload">
+        <h2 id="sportlounge-upload">11. Szenen in die Sportlounge hochladen</h2>
+        <p>Aus deinen Analyseszenen erstellt Sportlounge Clips mit automatisch erzeugten Titeln und deinen Kommentaren. Der Upload steht in der Sportlounge-Analyse auf iPad und Mac zur Verfügung.</p>
+        <ol class="steps">
+          <li><strong>Spiel vorbereiten:</strong> Öffne die Sportlounge-Analyse des Spiels und tippe auf die <strong>Wolke mit Pfeil nach oben</strong>. Du brauchst einen Sportlounge-Link mit numerischer Spiel-ID und musst bei Sportlounge angemeldet sein.</li>
+          <li><strong>Szenen auswählen:</strong> Wähle mindestens eine Szene mit Videozeit. Noch nicht hochgeladene Favoriten sind vorausgewählt. Die Titel entstehen automatisch aus Bewertung, Kategorien und Videozeit; deine Kommentare werden übernommen.</li>
+          <li><strong>Ziel festlegen:</strong> Wähle einen vorhandenen Ordner, erstelle einen neuen Ordner mit Namen oder wähle <strong>„Ohne Ordner (Meine Videos)“</strong>. Für einen neuen Ordner kannst du optional einen übergeordneten Ordner auswählen.</li>
+          <li><strong>Clipzeit einstellen:</strong> Wähle jeweils <strong>0–120 Sekunden vor und nach der Szene</strong>. Der Start wird auf 00:00 begrenzt; jeder Clip muss mindestens 5 Sekunden lang sein. Die Zeiten bleiben für den nächsten Upload gespeichert.</li>
+          <li><strong>Prüfen und hochladen:</strong> Kontrolliere unter <strong>„Prüfen“</strong> das Ziel, die Clipzeit und die Szenen und tippe auf <strong>„Szenen hochladen“</strong>. Nach der Verarbeitung findest du die Clips in Sportlounge unter dem gewählten Ziel. Das kann einige Minuten dauern; fehlgeschlagene Uploads kannst du erneut senden.</li>
+        </ol>
+      </section>
+
       <section aria-labelledby="dokumente">
-        <h2 id="dokumente">11. Dokumente offline bereithalten</h2>
+        <h2 id="dokumente">12. Dokumente offline bereithalten</h2>
         <p>Über <strong>„Dokumente“</strong> in „Meine Spiele“ (am Mac ⇧⌘D) hast du Regelwerke und eigene Unterlagen auch ohne Netz in der Halle dabei.</p>
         <ul>
           <li><strong>„Standarddokumente“</strong> bringt die App bereits mit.</li>
@@ -340,7 +354,7 @@
       </section>
 
       <section aria-labelledby="ordnung">
-        <h2 id="ordnung">12. Spiele suchen, archivieren, löschen</h2>
+        <h2 id="ordnung">13. Spiele suchen, archivieren, löschen</h2>
         <ul>
           <li><strong>Suchen:</strong> Das Suchfeld in „Meine Spiele“ findet Spiele nach Verein, Halle, Schiedsrichter oder Datum.</li>
           <li><strong>Archivieren:</strong> Erledigte Spiele verschiebst du über das Aktionsmenü oder per Wischen mit „Archivieren“ aus der aktiven Liste. Über den Umschalter <strong>„Aktiv“ / „Archiv“</strong> wechselst du die Ansicht; „Aus Archiv holen“ bringt ein Spiel zurück.</li>
@@ -349,7 +363,7 @@
       </section>
 
       <section aria-labelledby="probleme">
-        <h2 id="probleme">13. Wenn etwas nicht klappt</h2>
+        <h2 id="probleme">14. Wenn etwas nicht klappt</h2>
         <div class="faq">
           <details>
             <summary>Ich sehe wieder die Abo-Seite, obwohl ich ein Abo habe.</summary>
@@ -379,7 +393,7 @@
 
         <h2>Kontakt</h2>
         <p>Weitere Antworten findest du auf der <a href="index.html#faq">Support-Seite</a>. Bleibt eine Frage offen, schreibe an <strong><a href="mailto:ref_support@icloud.com">ref_support@icloud.com</a></strong>. Bitte nenne die verwendete RefSupport-Version und beschreibe die Schritte bis zum Problem. Sende keine Passwörter oder unnötigen personenbezogenen Daten.</p>
-        <p class="meta">Stand: 8. Oktober 2026</p>
+        <p class="meta">Stand: 23. Oktober 2026</p>
       </section>
 
     </div>

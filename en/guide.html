@@ -53,6 +53,7 @@
         <li><a href="#delegate">Delegate mode: running a match</a></li>
         <li><a href="#after-match">After the match: reports and expenses</a></li>
         <li><a href="#analysis">Analysis and Sportlounge video</a></li>
+        <li><a href="#sportlounge-upload">Upload scenes to Sportlounge</a></li>
         <li><a href="#documents">Keep documents available offline</a></li>
         <li><a href="#organise">Search, archive and delete matches</a></li>
         <li><a href="#troubleshooting">If something does not work</a></li>
@@ -68,7 +69,7 @@
       <section aria-labelledby="requirements">
         <h2 id="requirements">1. What you need</h2>
         <ul>
-          <li><strong>An iPad or a Mac.</strong> RefSupport runs on iPad (iPadOS 17 or later) and on Mac. There is no iPhone version.</li>
+          <li><strong>An iPad or a Mac.</strong> RefSupport runs on iPad (iPadOS 17 or later) and Mac. An iPhone beta is available through TestFlight: manage matches and record scenes with ratings and comments in coach/observer mode. Delegate and analysis modes are unavailable on iPhone.</li>
           <li><strong>Your Apple Account.</strong> It is used for the “RefSupport Pro” subscription and, if you are signed in to iCloud, for syncing between your devices.</li>
           <li><strong>Internet access for setup.</strong> Subscribing, importing league fixtures and iCloud sync need a connection. Your matches and documents are then stored on the device and remain available offline in the arena.</li>
           <li><strong>Optional: Apple Pencil</strong> for handwritten notes, and a <strong>Sportlounge account</strong> if you want to use match videos in the analysis.</li>
@@ -164,7 +165,7 @@
 
       <section aria-labelledby="mode">
         <h2 id="mode">6. Open the match and choose a mode</h2>
-        <p>Tap your match in “Meine Spiele”. The first time you open it, RefSupport asks <strong>“Modus für dieses Spiel wählen”</strong> (Choose a mode for this match):</p>
+        <p>Tap your match in “Meine Spiele”. Only coach/observer mode is available on iPhone. On iPad and Mac, the first time you open a match, RefSupport asks <strong>“Modus für dieses Spiel wählen”</strong> (Choose a mode for this match):</p>
         <dl>
           <dt>“Coach / Beobachter” (Coach / observer)</dt>
           <dd>For referee observation: match clock, score and observations with category and rating. Continue with <a href="#coaching">step 7</a>.</dd>
@@ -189,6 +190,7 @@
           <li>For a <strong>team time-out</strong>, tap the team's time-out: the first tap immediately stops the match time and starts the 60 seconds. In the time-out window you can record the restart (“Wurffortsetzung”), whether passive play was signalled (“Passiv angezeigt”) and the passes played.</li>
           <li>At the end of the first half the button changes to <strong>“HZ 1 Ende”</strong> (End of first half); the half-time window shows the punishments still running. Finish the match with <strong>“Spielende”</strong> (End of match).</li>
         </ol>
+        <p><strong>Automatic match closure:</strong> If you forget to tap “Spielende” (End of match) after playing time ends, RefSupport closes the match automatically 15 minutes later and stops the video clock. Extra time moves this deadline to 15 minutes after extra time ends. If you have recorded a 7-metre shoot-out, finish the match manually.</p>
         <div class="notice">
           <p><strong>Is the clock stopped?</strong> A stopped match time pulses orange, and in coach mode the entry button turns orange as well. If you make several entries while the clock is stopped, a notice reminds you.</p>
         </div>
@@ -268,7 +270,7 @@
 
         <h3>After the final whistle</h3>
         <ol class="steps">
-          <li>End the match with <strong>“Spielende”</strong>.</li>
+          <li>End the match with <strong>“Spielende”</strong>. If you forget, <a href="#coaching">automatic match closure</a> takes effect after 15 minutes; after a recorded 7-metre shoot-out, you must finish manually.</li>
           <li>Work through the <strong>“Nach dem Spiel”</strong> checklist.</li>
           <li>Open <strong>“Spielübersicht”</strong> (Match summary): it lists the fixture, officials, checklists, times, team time-outs, favourites and the complete timeline. <strong>“Zusammenfassung teilen”</strong> (Share summary) passes the summary on as text.</li>
         </ol>
@@ -281,7 +283,7 @@
           <dt>“Spielprotokoll (PDF)” (Match report)</dt>
           <dd>Creates the log of your match as a PDF and opens the share sheet.</dd>
           <dt>“Analyse exportieren” (Export analysis)</dt>
-          <dd>Outputs the analysis report as a PDF.</dd>
+          <dd>Exports the analysis report as PDF or Excel (.xlsx) for saving or sharing. Match details appear on an additional PDF page and in a separate Excel sheet, “Spieldaten” (Match details).</dd>
           <dt>“Spiel für App teilen” (Share match for app)</dt>
           <dd>Creates a <code>.refsupportgame</code> file that others can open in their RefSupport app. Expenses and documents are not included.</dd>
           <dt>“Reisekostenabrechnung” (Expense claim)</dt>
@@ -315,7 +317,7 @@
           <li>The analysis lists the <strong>scenes</strong> from your log. “Szenen filtern” (Filter scenes) narrows them down by categories A1–B4 and decision rating.</li>
           <li>Tap a scene to add club, rating, categories and a comment (typed or handwritten) in the <strong>“Szenendetails”</strong> (scene details).</li>
           <li>Under <strong>“Allgemeine Anmerkungen”</strong> (General remarks) you record what applies to the match as a whole.</li>
-          <li>Choose PDF or Excel (.xlsx) through “Analyse exportieren” (Export analysis) in “Meine Spiele” or the export button in analysis. The export has its own filter for favourites, categories and rating. Excel starts with “Videozeiten” (Video times), followed by “Chronologisch” (Chronological) and “Nach Bereichen” (By category).</li>
+          <li>Choose PDF or Excel (.xlsx) through “Analyse exportieren” (Export analysis) in “Meine Spiele” or the export button in analysis. The export has its own filter for favourites, categories and rating. Alongside “Videozeiten” (Video times), “Chronologisch” (Chronological) and “Nach Bereichen” (By category), Excel now includes a separate <strong>“Spieldaten”</strong> (Match details) sheet. The PDF includes an additional page with the same details: final score, half-time score, competition, arena, officials and your name as referee observer.</li>
         </ol>
 
         <h3>Connecting a Sportlounge video (optional)</h3>
@@ -332,8 +334,20 @@
         </div>
       </section>
 
+      <section aria-labelledby="sportlounge-upload">
+        <h2 id="sportlounge-upload">11. Upload scenes to Sportlounge</h2>
+        <p>Sportlounge turns your analysis scenes into clips with automatically generated titles and your comments. Upload is available in Sportlounge analysis on iPad and Mac.</p>
+        <ol class="steps">
+          <li><strong>Prepare the match:</strong> Open the match’s Sportlounge analysis and tap the <strong>cloud with an upward arrow</strong>. You need a Sportlounge link containing a numeric match ID and must be signed in to Sportlounge.</li>
+          <li><strong>Select scenes:</strong> Choose at least one scene with a video time. Favourites that have not yet been uploaded are preselected. Titles are generated from the rating, categories and video time; your comments are included.</li>
+          <li><strong>Choose a destination:</strong> Select an existing folder, create a named folder or choose <strong>“Ohne Ordner (Meine Videos)”</strong> (No folder – My videos). You can optionally select a parent folder for a new folder.</li>
+          <li><strong>Set the clip timing:</strong> Include <strong>0–120 seconds before and after each scene</strong>. The start cannot be earlier than 00:00, and every clip must be at least 5 seconds long. These settings are saved for your next upload.</li>
+          <li><strong>Review and upload:</strong> Under <strong>“Prüfen”</strong> (Review), check the destination, clip timing and scenes, then tap <strong>“Szenen hochladen”</strong> (Upload scenes). Once processing is complete, the clips appear in Sportlounge at your chosen destination. This may take a few minutes; failed uploads can be retried.</li>
+        </ol>
+      </section>
+
       <section aria-labelledby="documents">
-        <h2 id="documents">11. Keep documents available offline</h2>
+        <h2 id="documents">12. Keep documents available offline</h2>
         <p><strong>“Dokumente”</strong> (Documents) in “Meine Spiele” (⇧⌘D on Mac) keeps regulations and your own papers at hand in the arena, even without a network.</p>
         <ul>
           <li><strong>“Standarddokumente”</strong> (Standard documents) are included with the app.</li>
@@ -344,7 +358,7 @@
       </section>
 
       <section aria-labelledby="organise">
-        <h2 id="organise">12. Search, archive and delete matches</h2>
+        <h2 id="organise">13. Search, archive and delete matches</h2>
         <ul>
           <li><strong>Search:</strong> The search field in “Meine Spiele” finds matches by club, arena, referee or date.</li>
           <li><strong>Archive:</strong> Move finished matches out of the active list with “Archivieren” (Archive) in the action menu or by swiping. The <strong>“Aktiv” / “Archiv”</strong> switch changes the view; “Aus Archiv holen” (Restore from archive) brings a match back.</li>
@@ -353,7 +367,7 @@
       </section>
 
       <section aria-labelledby="troubleshooting">
-        <h2 id="troubleshooting">13. If something does not work</h2>
+        <h2 id="troubleshooting">14. If something does not work</h2>
         <div class="faq">
           <details>
             <summary>I see the subscription screen again although I have a subscription.</summary>
@@ -383,7 +397,7 @@
 
         <h2>Contact</h2>
         <p>More answers are on the <a href="index.html#faq">support page</a>. If a question remains open, email <strong><a href="mailto:ref_support@icloud.com">ref_support@icloud.com</a></strong>. Please include the RefSupport version and describe the steps leading to the problem. Do not send passwords or unnecessary personal data.</p>
-        <p class="meta">Last updated: 8 October 2026</p>
+        <p class="meta">Last updated: 23 October 2026</p>
       </section>
 
     </div>
