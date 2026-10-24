@@ -36,7 +36,7 @@
     <p class="eyebrow">Legal</p>
     <h1>Privacy Policy</h1>
     <p class="lead">This policy describes how personal data is processed in the RefSupport app and on this support website. The RefSupport app does not operate its own backend server and contains no advertising, no user tracking, and no analytics or crash-reporting services.</p>
-    <p class="meta">Last updated: 23 October 2026. This English version is a convenience translation; the <a href="../datenschutz.html">German version</a> prevails.</p>
+    <p class="meta">Last updated: 24 October 2026. This English version is a convenience translation; the <a href="../datenschutz.html">German version</a> prevails.</p>
 
     <h2>1. Controller</h2>
     <p>Oliver Frankholz<br>Fedelhören 38<br>28203 Bremen<br>Germany</p>
@@ -58,11 +58,12 @@
 
     <h3>Device settings and credentials</h3>
     <p>The app also stores your personal delegate checklist questions and the video volume and mute setting locally. If you use the optional Sportlounge feature, access tokens are stored in the Apple Keychain. Only if “Stay signed in” is enabled are your Sportlounge email address, password and club ID additionally stored there, bound to the device. When you sign out, RefSupport deletes this Sportlounge data from the Keychain.</p>
+    <p>For troubleshooting, RefSupport keeps a local diagnostic log. It contains only technical details, such as the time, duration, result and cause of errors of iCloud sync, imports, saving and purchases, but no names, notes or account data. It covers at most the last 7 days and is limited to 1 MB. The log only leaves the device if you share it yourself via “Diagnose-Protokoll teilen” (Share diagnostic log) in “My Data”, for example by email to support.</p>
 
     <h2>3. Local storage, iCloud and backups</h2>
     <p>Matches are stored as JSON files in the app’s documents area; your own documents are stored in the Application Support area. Profile data and individual settings are stored in <code>UserDefaults</code>, Sportlounge credentials in the Keychain, and retrieved schedule data in the cache.</p>
     <p>If an iCloud account is available, matches and your own documents are synchronised automatically via Apple’s CloudKit in the user’s private database in the container <code>iCloud.com.oliverfrankholz.HandballTimer</code>. This includes personal content contained in matches or your own documents. The profile from “My Data”, the leagues starred as “Meine Ligen” (My leagues) and the selection of nuLiga sources are synchronised as well. The Sportlounge Keychain entries are not synchronised by this CloudKit feature.</p>
-    <p>Before the local set of matches is reduced, RefSupport creates a local backup and keeps at most five such backups. A deleted match may therefore temporarily remain in these rotating local backups. In CloudKit, technical deletion markers remain for deleted matches and documents so that other devices do not upload deleted content again. Matches older than 90 days are merely archived and are not deleted automatically.</p>
+    <p>Before the local set of matches is reduced, RefSupport creates a local backup and keeps at most five such backups. A deleted match may therefore temporarily remain in these rotating local backups. In CloudKit, technical deletion markers remain for deleted matches and documents so that other devices do not upload deleted content again. Matches older than 90 days are merely archived and are not deleted automatically. If RefSupport cannot read a saved match or the match comes from a newer app version, it is kept unchanged and additionally stored in a local backup file.</p>
 
     <h2>4. Network connections and recipients</h2>
     <p>With every internet connection, the respective service technically receives necessary data such as IP address, time, requested address and device/HTTP metadata. RefSupport only establishes connections for the features described below:</p>
@@ -108,6 +109,7 @@
       <li>Local match backups are limited to at most five versions and are overwritten as new backups are created. They also disappear together with the app data.</li>
       <li>Import caches are limited to a total of 20 MiB; older, least recently used entries are removed when this budget is exceeded. Depending on the type, refresh intervals of 30 minutes to 30 days apply, which do not by themselves trigger immediate deletion.</li>
       <li>If “Stay signed in” is enabled, Sportlounge credentials remain stored until you sign out or the Keychain entry is otherwise deleted.</li>
+      <li>Entries in the local diagnostic log are removed automatically after 7 days.</li>
       <li>Content stored in iCloud remains stored until it is deleted in the app or via the management of your own iCloud account. Technical deletion markers have no automatic expiry.</li>
       <li>Support emails are deleted once the request has been fully dealt with and no statutory retention or documentation obligations prevent deletion.</li>
     </ul>

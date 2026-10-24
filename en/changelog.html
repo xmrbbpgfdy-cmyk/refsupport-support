@@ -37,14 +37,42 @@
     <h1>What’s new</h1>
     <p class="lead">New features, improvements and fixes, with the latest version first. Dates refer to the documented version milestones.</p>
 
+    <section class="release" id="version-1-9-0" aria-labelledby="version-1-9-0-title">
+      <h2 id="version-1-9-0-title">Version 1.9.0</h2>
+      <p class="meta"><time datetime="2026-10-24">24 October 2026</time> · Build 13</p>
+      <ul>
+        <li>RefSupport is now officially available for iPhone (iOS 17 or later). In coach/observer mode you manage your matches on the go and record scenes with ratings and comments; via iCloud they also appear on iPad and Mac. Use delegate and analysis modes on iPad and Mac. Delegate matches are listed on iPhone and point you to iPad or Mac when opened.</li>
+        <li>On iPhone, mark a scene as a favourite while you are still entering it, using the star next to “Eintragen” (Enter). The filter is called “Favoriten” (Favourites); “Alle zeigen” (Show all) brings back all scenes.</li>
+        <li>In Sportlounge analysis on iPad and Mac, show or hide the scene list with “Szenenliste ausblenden” / “Szenenliste einblenden” (Hide/Show scene list) or ⌃⌘S. Drag to adjust its width; a double tap or double click resets it. The setting is remembered.</li>
+        <li>On iPad, the video gets more room: the scene list stays at the side in portrait orientation too, the height of the scene details is adjustable and the header is more compact. Video and match time are shown right next to the slider.</li>
+        <li>Pinch to zoom the video on iPad up to five times and pan the view. A double tap or “Videozoom zurücksetzen” (Reset video zoom) restores the view; the zoom is kept when you move to the next scene.</li>
+        <li>Control the video with a keyboard on iPad too: Space to play and pause, ↑/↓ for speed, ←/→ to jump five seconds or, when paused, one frame. Shortcuts do not interfere while you type in text fields.</li>
+        <li>In the scene details, an icon button sets the scene to the current video position. The “-5 s” to “+5 s” buttons have been removed; the time field and “Zurücksetzen” (Reset) remain.</li>
+        <li>“Besondere Szene” (special scene) is now called “Favorit” (favourite) everywhere: when editing (“Als Favorit markieren”, Mark as favourite), in analysis and in PDF and Excel exports (“★ Favorit”, “Szenen gesamt: … · Favoriten: …”).</li>
+        <li>Matches saved with a newer RefSupport version remain unchanged on devices running an older version and are not overwritten. The iCloud status then asks you to update RefSupport on all devices. Matches that cannot be read are additionally backed up locally.</li>
+        <li>In “My Data”, use “Diagnose-Protokoll teilen” (Share diagnostic log) to send support a log of the last 7 days. It contains only technical details, for example about iCloud sync, imports and purchases – no names, notes or account data.</li>
+      </ul>
+    </section>
+
+    <section class="release" id="version-1-8-2" aria-labelledby="version-1-8-2-title">
+      <h2 id="version-1-8-2-title">Version 1.8.2</h2>
+      <p class="meta"><time datetime="2026-10-24">24 October 2026</time> · Build 12</p>
+      <ul>
+        <li>As with analysis exports, the invoice view on iPad and Mac now has separate buttons: “Rechnung sichern” (Save invoice) saves the PDF via the file dialog, “Rechnung teilen” (Share invoice) opens the share sheet directly.</li>
+        <li>The invoice shows the match number without the leading season code (e.g. “2627”) and in a smaller font.</li>
+      </ul>
+    </section>
+
     <section class="release" id="version-1-8-1" aria-labelledby="version-1-8-1-title">
       <h2 id="version-1-8-1-title">Version 1.8.1</h2>
-      <p class="meta"><time datetime="2026-10-23">23 October 2026</time> · Build 10</p>
+      <p class="meta"><time datetime="2026-10-23">23 October 2026</time> · Builds 9–11</p>
       <ul>
         <li>Upload selected scenes as clips using the cloud with an upward arrow in Sportlounge analysis. Choose how many seconds to include before and after each scene, then select a destination folder or “Meine Videos” (My videos). Sportlounge creates the clips with automatically generated titles and your comments.</li>
         <li>If you forget to tap “Spielende” (End of match) after playing time ends, RefSupport automatically closes the match 15 minutes later and stops the video clock. Extra time moves this deadline to 15 minutes after extra time ends. If you have recorded a 7-metre shoot-out, finish the match manually.</li>
         <li>Analysis exports now include match details on an additional PDF page and in a separate Excel sheet, “Spieldaten” (Match details): final score, half-time score, competition, arena, officials and your name as referee observer.</li>
         <li>RefSupport is also available as an iPhone beta through TestFlight. Manage matches and record scenes with ratings and comments on the go in coach/observer mode. Delegate and analysis modes are unavailable on iPhone.</li>
+        <li>A single unreadable match in iCloud no longer stops synchronization. It is skipped, not overwritten and retried during the next sync (Build 11).</li>
+        <li>On iPhone, pull down to refresh the match list (Build 11).</li>
       </ul>
     </section>
 

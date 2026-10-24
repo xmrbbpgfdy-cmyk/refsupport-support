@@ -36,7 +36,7 @@
     <p class="eyebrow">Rechtliches</p>
     <h1>Datenschutzerklärung</h1>
     <p class="lead">Diese Erklärung beschreibt die Verarbeitung personenbezogener Daten in der App RefSupport und auf dieser Support-Website. Die RefSupport-App betreibt keinen eigenen Backend-Server und enthält keine Werbung, kein Nutzertracking und keine Analytics- oder Crash-Reporting-Dienste.</p>
-    <p class="meta">Stand: 23. Oktober 2026</p>
+    <p class="meta">Stand: 24. Oktober 2026</p>
 
     <h2>1. Verantwortlicher</h2>
     <p>Oliver Frankholz<br>Fedelhören 38<br>28203 Bremen<br>Deutschland</p>
@@ -58,11 +58,12 @@
 
     <h3>Geräteeinstellungen und Zugangsdaten</h3>
     <p>Die App speichert lokal außerdem persönliche Delegierten-Checklistenfragen sowie Video-Lautstärke und Stummschaltung. Wenn du die optionale Sportlounge-Funktion nutzt, werden Zugriffstoken im Apple-Schlüsselbund gespeichert. Nur wenn „Angemeldet bleiben“ aktiviert ist, werden dort zusätzlich Sportlounge-E-Mail-Adresse, Passwort und Vereins-ID gerätegebunden abgelegt. Beim Abmelden löscht RefSupport diese Sportlounge-Daten aus dem Schlüsselbund.</p>
+    <p>Für die Fehlersuche führt RefSupport lokal ein Diagnose-Protokoll. Es enthält nur technische Angaben, etwa Zeitpunkt, Dauer, Ergebnis und Fehlerursache von iCloud-Abgleich, Import, Speichern und Käufen, aber keine Namen, Notizen oder Kontodaten. Es umfasst höchstens die letzten 7 Tage und ist auf 1 MB begrenzt. Das Protokoll verlässt das Gerät nur, wenn du es unter „Meine Daten“ mit „Diagnose-Protokoll teilen“ selbst weitergibst, etwa per E-Mail an den Support.</p>
 
     <h2>3. Lokale Speicherung, iCloud und Backups</h2>
     <p>Spiele liegen als JSON-Dateien im Dokumentbereich der App; eigene Dokumente liegen im Application-Support-Bereich. Profildaten und einzelne Einstellungen liegen in <code>UserDefaults</code>, Sportlounge-Zugangsdaten im Schlüsselbund und abgerufene Spielplandaten im Cache.</p>
     <p>Spiele und eigene Dokumente werden bei verfügbarem iCloud-Konto automatisch über Apples CloudKit in der privaten Datenbank des Nutzers im Container <code>iCloud.com.oliverfrankholz.HandballTimer</code> synchronisiert. Das umfasst auch personenbezogene Inhalte, die in Spielen oder eigenen Dokumenten enthalten sind. Ebenfalls synchronisiert werden das Profil aus „Meine Daten“, die als „Meine Ligen“ markierten Ligen und die Auswahl der nuLiga-Quellen. Der Sportlounge-Schlüsselbund wird durch diese eigene CloudKit-Funktion nicht synchronisiert.</p>
-    <p>Vor einer Verringerung des lokalen Spielbestands legt RefSupport eine lokale Sicherung an und behält höchstens fünf solcher Spielstand-Sicherungen. Deshalb kann ein gelöschtes Spiel vorübergehend noch in diesen rotierenden lokalen Sicherungen enthalten sein. In CloudKit bleiben für gelöschte Spiele und Dokumente technische Löschinformationen bestehen, damit andere Geräte gelöschte Inhalte nicht erneut hochladen. Spiele, die älter als 90 Tage sind, werden lediglich archiviert und nicht automatisch gelöscht.</p>
+    <p>Vor einer Verringerung des lokalen Spielbestands legt RefSupport eine lokale Sicherung an und behält höchstens fünf solcher Spielstand-Sicherungen. Deshalb kann ein gelöschtes Spiel vorübergehend noch in diesen rotierenden lokalen Sicherungen enthalten sein. In CloudKit bleiben für gelöschte Spiele und Dokumente technische Löschinformationen bestehen, damit andere Geräte gelöschte Inhalte nicht erneut hochladen. Spiele, die älter als 90 Tage sind, werden lediglich archiviert und nicht automatisch gelöscht. Kann RefSupport ein gespeichertes Spiel nicht lesen oder stammt es aus einer neueren App-Version, bleibt es unverändert erhalten und wird zusätzlich in einer lokalen Sicherungsdatei abgelegt.</p>
 
     <h2>4. Netzwerkverbindungen und Empfänger</h2>
     <p>Bei jeder Internetverbindung fallen beim jeweiligen Dienst technisch notwendige Daten wie IP-Adresse, Zeitpunkt, angefragte Adresse und Geräte-/HTTP-Metadaten an. RefSupport stellt nur für die nachfolgend beschriebenen Funktionen Verbindungen her:</p>
@@ -108,6 +109,7 @@
       <li>Lokale Spielstand-Sicherungen werden auf höchstens fünf Versionen begrenzt und beim Entstehen neuer Sicherungen überschrieben. Sie verschwinden außerdem mit den App-Daten.</li>
       <li>Import-Caches sind auf insgesamt 20 MiB begrenzt; ältere, zuletzt nicht verwendete Einträge werden bei Überschreiten dieses Budgets entfernt. Je nach Art gelten Aktualisierungsfristen von 30 Minuten bis 30 Tagen, die allein noch keine sofortige Löschung auslösen.</li>
       <li>Sportlounge-Zugangsdaten bleiben bei aktivierter Option „Angemeldet bleiben“ bis zum Abmelden oder anderweitigen Löschen des Schlüsselbund-Eintrags gespeichert.</li>
+      <li>Einträge im lokalen Diagnose-Protokoll werden nach 7 Tagen automatisch entfernt.</li>
       <li>In iCloud gespeicherte Nutzinhalte bleiben bis zur Löschung in der App oder der Verwaltung des eigenen iCloud-Kontos gespeichert. Technische Löschvermerke besitzen keine automatische Ablauffrist.</li>
       <li>Support-E-Mails werden gelöscht, sobald das Anliegen abschließend bearbeitet ist und keine gesetzlichen Aufbewahrungs- oder Nachweispflichten entgegenstehen.</li>
     </ul>
